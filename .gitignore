@@ -7,6 +7,11 @@
 # Ignore bundler config.
 /.bundle
 
+# Ignore the default SQLite database.
+/db/*.pg
+/db/*.SQLite
+/db/development_db
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
@@ -30,5 +35,4 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
-/app/assets/builds/*
-!/app/assets/builds/.keep
+/.env
