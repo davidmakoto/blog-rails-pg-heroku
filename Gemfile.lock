@@ -127,6 +127,9 @@ GEM
     nio4r (2.5.9)
     nokogiri (1.14.3-x64-mingw-ucrt)
       racc (~> 1.4)
+    nokogiri (1.14.3-x86_64-linux)
+      racc (~> 1.4)
+    pg (1.4.6)
     pg (1.4.6-x64-mingw-ucrt)
     public_suffix (5.0.1)
     puma (5.6.5)
@@ -179,7 +182,12 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     sqlite3 (1.6.2-x64-mingw-ucrt)
+    sqlite3 (1.6.2-x86_64-linux)
     stimulus-rails (1.2.1)
+      railties (>= 6.0.0)
+    tailwindcss-rails (2.0.27-x64-mingw-ucrt)
+      railties (>= 6.0.0)
+    tailwindcss-rails (2.0.27-x86_64-linux)
       railties (>= 6.0.0)
     thor (1.2.1)
     timeout (0.3.2)
@@ -210,6 +218,7 @@ GEM
 
 PLATFORMS
   x64-mingw-ucrt
+  x86_64-linux
 
 DEPENDENCIES
   bootsnap
@@ -224,6 +233,7 @@ DEPENDENCIES
   sprockets-rails
   sqlite3 (~> 1.4)
   stimulus-rails
+  tailwindcss-rails (~> 2.0)
   turbo-rails
   tzinfo-data
   web-console
@@ -233,4 +243,4 @@ RUBY VERSION
    ruby 3.1.2p20
 
 BUNDLED WITH
-   2.3.20
+   2.4.12
