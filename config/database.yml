@@ -23,6 +23,7 @@ default: &default
 
 development:
   <<: *default
+  DATABASE_URL: "postgres://hplbqabudzhpfe:e01960b2f2f490ca548fe81bf3ef088f94b63fd5a9b385534fbfa5ec54a54119@ec2-44-213-151-75.compute-1.amazonaws.com:5432/d96ubgkfofga3f"
   host: localhost
   username: user
   database: app-dev
