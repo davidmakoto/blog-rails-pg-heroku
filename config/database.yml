@@ -15,6 +15,8 @@
 # gem "pg"
 #
 default: &default
+  DATABASE_URL: <%= ENV["DATABASE_URL"] %>
+  password: <%= ENV["DATABASE_PASSWORD"] %>
   adapter: postgresql
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
@@ -23,7 +25,6 @@ default: &default
 
 development:
   <<: *default
-  DATABASE_URL: <%= ENV["DATABASE_URL"] %>
   host: localhost
   username: user
   database: app-dev
