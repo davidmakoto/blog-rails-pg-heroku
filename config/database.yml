@@ -23,8 +23,9 @@ default: &default
 
 development:
   <<: *default
-  database: blog_development
-  adapter: sqlite3
+  host: localhost
+  username: user
+  database: app-dev
 
 
   # The specified database role being used to connect to postgres.
