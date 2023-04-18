@@ -4,13 +4,13 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.1.2"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.0.4", ">= 7.0.4.3"
+gem "rails", "~> 7.0.4"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
 
-# Use postgresql as the database for Active Record
-gem "pg", "~> 1.1"
+# Use pg as the database for Active Record
+gem "pg", "1.3.5"
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", "~> 5.0"
@@ -42,22 +42,29 @@ gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 # Reduces boot times through caching; required in config/boot.rb
 gem "bootsnap", require: false
 
-gem 'dotenv-rails', groups: [:development, :test]
-
 # Use Sass to process CSS
-# gem "sassc-rails"
+gem "sassc-rails"
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
-# gem "image_processing", "~> 1.2"
+gem "image_processing", "~> 1.2"
+
+gem "devise"
+
+gem 'cancancan'
+
 
 group :development, :test do
+  gem "sqlite3", "~> 1.4"
+  gem 'faker', github: 'faker-ruby/faker'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem "byebug", platforms: %i[ mri mingw x64_mingw ]
+  gem "factory_bot_rails", "~> 6.2.0"
+  gem "rspec-rails"
 end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
-  gem "sqlite3", "~> 1.4"
   gem "web-console"
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
@@ -72,6 +79,11 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem "shoulda-matchers"
 end
 
-gem "tailwindcss-rails", "~> 2.0"
+group :production do
+  gem "pg", "1.3.5"
+end
+
+gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
